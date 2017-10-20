@@ -1,0 +1,211 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>IBolg</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/fontAwesome.css">
+		<link rel="stylesheet" href="css/templatemo-style.css">
+		<link rel="stylesheet" href="css/Style.css">
+		<link rel="stylesheet" href="css/demo.css">
+		<link rel="stylesheet" href="css/imgup.css" />
+	</head>
+
+	<body onload="startTime()">
+		<form action="" method="post">
+		<div class="overlay "></div>
+				<p align="right" class="cd-hero" style="padding:15px 20px;color:white;font-weight: bold;">
+				欢迎，作者ID|<a href="denglu.html">退出</a>
+		        </p>
+		<section class="top-part ">
+			<video controls autoplay loop>
+				<source src="videos/video.mp4 " type="video/mp4 ">
+				<source src="videos/video.ogg " type="video/ogg "> Your browser does not support the video tag.
+			</video>
+		</section>
+
+		<section class="cd-hero ">
+
+			<div class="cd-slider-nav ">
+				<nav>
+					<span class="cd-marker item-1 "></span>
+					<ul>
+						<li class="selected ">
+							<a href="#0 ">
+								<div class="image-icon "><img src="img/home-icon.png "></div>
+								<h6>个人资料</h6></a>
+						</li>
+						<li>
+							<a href="#0 ">
+								<div class="image-icon "><img src="img/featured-icon.png "></div>
+								<h6>我的文章</h6></a>
+						</li>
+						<li>
+							<a href="#0 ">
+								<div class="image-icon "><img src="img/projects-icon.png "></div>
+								<h6>照片墙</h6></a>
+						</li>
+						<li>
+							<a href="#0 ">
+								<div class="image-icon "><img src="img/contact-icon.png "></div>
+								<h6>评论区</h6></a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<!-- .cd-slider-nav -->
+
+			<ul class="cd-hero-slider ">
+
+				<li class="selected ">
+					<div class="heading ">
+						<h1>个人资料</h1>
+					</div>
+					<div class="cd-full-width first-slide ">
+						<div class="container ">
+							<div class="row ">
+								<div class="col-md-3 "></div>
+								<div class="col-md-6 ">
+									<div class="content first-content userTable ">
+									<label for="user_img ">头像:</label> <img id="user_img" class="img-circle" src="img/item-04.jpg " height="100px " width="100px"><br>	
+									<label for="user_name ">名称:</label> <span id="user_name ">作者ID</span><br />			
+									<label for="user_birthday ">生日:</label> <input type="text " id="user_birthday "/><br>
+									<label for="user_sex ">性别:</label> <input type="text " id="user_sex "/><br>
+									<label for="user_like ">爱好:</label> <input type="text " id="user_like "/><br>
+									<label for="user_jj">简介:</label> <textarea id="user_jj ">	</textarea>			
+									</div>
+								</div>
+								<div class="col-md-3 "></div>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="heading ">
+						<h1>我的文章</h1>
+					</div>
+					<div class="cd-half-width third-slide ">
+						<div class="container ">
+							<div class="row ">
+								<div class="col-md-12 ">
+									<div class="content third-content ">
+										<div class="row ">
+											<div class="col-md-7 left-image ">
+												<img src="img/left-feature-image.png ">
+											</div>
+											<div class="col-md-5 ">
+												<div class="right-feature-text easyTable">																									
+													<h4><input type="text " id="airtical_title" placeholder="文章标题,不超过15个字符 " maxlength="15 "/></h4>
+													<span style="font-size:13px">文章类别：<select name="" id="airtical_category">
+														<option value="">技术</option>
+														<option value="">美食</option>
+														<option value="">摄影</option>
+													</select>&nbsp;&nbsp;&nbsp;&nbsp;
+													<span class="fa fa-fire" style="color:red"><span  id="airtical_hot" style="color:black">0</span></span>
+													&nbsp;&nbsp;&nbsp;&nbsp;
+													<span id="airtical_date"></span>
+													</span>
+													<br /><br />
+													<textarea id="airticai_content">
+														请开始你的表演。。。
+													</textarea>						
+												</div>
+											</div>
+										</div>		
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="heading ">
+						<h1>照片墙</h1>
+					</div>
+					<div class="cd-half-width fourth-slide ">
+						<div class="container ">
+							<div class="row ">
+								<div class="col-md-12 ">
+									
+									<div class="content fourth-content ">
+										
+										<input type="text" value="相册名" id="photo_name" style="float:left">
+										 <!--图片选择对话框-->
+									    <div id="div_imgfile"><img src="img/image.png"></div>
+									
+									    <!--图片预览容器-->
+									    <div id="div_imglook">
+									        <div style="clear: both;"></div>
+									    </div>
+									    <br />
+									     共<span id="photo_num">0</span>张图片
+									     <br /><br /><br />
+									    <!--确定上传按钮-->
+									    <input type="button" value="确定上传" id="btn_ImgUpStart" />
+
+										
+									</div>
+					            </div>
+					        </div>
+					</div>
+
+				</li>
+
+				<li>
+					<div class="heading ">
+						<h1>评论区</h1>
+					</div>
+					<div class="cd-half-width fivth-slide ">
+						<div class="container ">
+							<div class="row ">
+							
+								<div class="col-md-12 ">
+									<div class="content fivth-content ">
+
+										<div class="left-info ">
+											<textarea>说点啥。。。
+										    </textarea><br /><br />
+                                          
+											<div style="LINE-HEIGHT: 12px" id="bdshare" class="bdshare_b"><img src="img/type-button-1.jpg"> </div>
+											<script id="bdshare_js" type="text/javascript" data="type=button&uid=664845" src="js/Share.js"></script>
+
+											<br/>
+											<br/>
+										</div>
+										<fieldset>
+											<button type="submit " id="form-submit " class="btn ">提交</button>
+										</fieldset>
+		
+									</div>
+								</div>
+						
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<!-- .cd-hero-slider -->
+		</section>
+		<!-- .cd-hero -->
+        </form>
+		<footer>
+			<p>Copyright &copy; 作者ID</p>
+
+		</footer>
+  
+		<script src="js/jquery-1.11.2.min.js "></script>
+		<script src="js/jquery-migrate-1.2.1.min.js"></script>
+		<script src="js/bootstrap.min.js "></script>
+		<script src="js/main.js "></script>
+		<script src="js/NowTime.js"></script>
+		<script src="js/imgup.js"></script>
+	</body>
+
+</html>

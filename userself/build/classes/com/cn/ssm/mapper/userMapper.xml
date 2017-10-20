@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cn.ssm.mapper.userMapper">
+
+	<!-- //通过账号和密码查询是否有这个用户 -->
+	<select id="exist" parameterType="QueryVo" resultType="int">
+		select count(*) from user where user_account=#{account} and user_password=#{password}
+	</select>
+	<!-- 通过账号和密码查询User -->
+	<select id="selectIntroByUserId" parameterType="int" resultType="Intro">
+		select user_img,user_name,user_birthday,user_sex,user_like,user_jj from user where user_id=#{id}
+	</select>
+	<!-- 通过账户密码查询ID -->
+	<select id="selectUserIdByQueryVo" parameterType="QueryVo" resultType="int">
+		select user_id from user where user_account=#{account} and user_password=#{password}
+	</select>
+	<!-- 	//通过ID查询用户所有文章 -->
+	<select id="selectEssayByUserId" parameterType="int" resultType="Essay">
+		select airtical_title,airtical_category essaylab,airtical_count airtical_hot,airtical_date,airtical_content from airtical where airtical_creater = #{id}
+	</select>
+	<!-- 通过相册类别查询用户的相册  -->
+	<select id="selectPhotoAlbumByPhotoName" parameterType="String" resultType="String">
+		select photo_src from photo where photo_name = #{name}
+	</select>
+	<!-- 通过ID查询相册名字-->
+	<select id="selectPhotoNameByUserId" parameterType="int" resultType="String">
+		select distinct photo_name from photo where photo_creater = #{id}
+	</select>
+	<!-- 修改用户数据 -->
+	<update id="updateUserByQueryVo" parameterType="QueryVo">
+		update user
+		<set>
+			
+		</set>
+	</update>
+</mapper>

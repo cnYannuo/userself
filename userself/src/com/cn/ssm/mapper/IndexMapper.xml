@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cn.ssm.mapper.IndexMapper">
+
+	<!-- 获取轮播图的信息资料  4-6组 -->
+	<select id="selectLunbo" parameterType="int" resultType="lunbo">
+		select airtical_img img,airtical_title title,airtical_content text from airtical limit 0,#{size}
+	</select>
+	
+	<!-- //热门文章，提供三组，第一组提供图片，剩下的不给图片 -->
+	<select id="selectHot" parameterType="int" resultType="hot">
+		select airtical_img img,airtical_content text from airtical order by airtical_count desc limit 0,#{size}
+	</select>
+	
+	<!-- //"recommend":[{//名博推荐部分，提供4组 -->
+	<select id="selectRecommend" parameterType="int" resultType="recommend">
+		select user_name name,user_img img,user_like label from user order by user_count desc limit 0,#{size}
+	</select>
+	
+	<!-- //"nav":[{//分类导航，4-6组 -->
+	<select id="selectNav" parameterType="int" resultType="nav">
+		select * from nav
+	</select>
+	
+	<!-- //"swift":[{//快讯，9组左右 -->
+	<select id="selectSwift" parameterType="int" resultType="swift">
+		select airtical_title text,airtical_date time from airtical 
+		<where>
+			airtical_category = '新闻'
+		</where>
+		 order by airtical_date asc limit 0,#{size}
+	</select>
+	
+	<!-- // "box":[{//主体部分，14组  -->
+	<select id="selectBox" parameterType="int" resultType="box">
+		select airtical_img img,airtical_date time,airtical_category label,airtical_count visitor from airtical limit 0,#{size}
+	</select>
+	
+</mapper>

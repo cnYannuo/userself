@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+</head>
+<style type="text/css">
+    *{padding:0;margin:0;}
+    body{background:url(img/grass.jpg) no-repeat 50% 0;font-size:12px;}
+    img{border:0;height: 100%}
+    .lg{width:468px;height:468px;margin:100px auto;background:url(img/login_bg.png) no-repeat;}
+    .lg_top{ height:200px;width:468px;}
+    .lg_main{width:400px;height:180px;margin:0 25px;}
+    .lg_m_1{width:290px;height:100px;padding:60px 55px 20px 55px;}
+    .ur{height:33px;line-height:37px;border:1px solid gainsboro;color:#666;width:236px;margin:4px 28px;padding-left:10px;font-size:12px;}
+    .pw{height:33px;line-height:37px;border:1px solid gainsboro;color:#666;width:236px;margin:4px 28px;padding-left:10px;font-size:12px;}
+    #input{height:33px;line-height:37px;border:1px solid gainsboro;color:#666;width:130px;margin:4px 28px;padding-left:10px;font-size:12px;}
+    .bn{width:330px;height:72px;background:url(img/enter.png) no-repeat;border:0;display:block;font-size:18px;color:#FFF;}
+    .lg_foot{height:80px;width:330px;padding: 6px 68px 0 68px;}
+    #code {  font-family:Arial;  font-style:italic;  font-weight:bold;  border:0;  letter-spacing:2px;  color:blue; }
+     a:link,a:visited{text-decoration:none; }
+</style>
+<script src="denglu.js"></script>
+<body>
+<div class="lg">
+    <form action="#" method="POST">
+        <div class="lg_top"></div>
+        <div class="lg_main">
+            <div class="lg_m_1">
+                <input name="username" placeholder="用户名" value="" class="ur" />
+                <input name="password" placeholder="密码" type="password" value="" class="pw" />
+                <input type = "text" placeholder="验证码" id = "input"/>
+                <input type = "button" value = "验证" onclick = "validate()"/>
+            </div>
+        </div>
+        <div class="lg_foot">
+            <a href="index.html"><input type="submit" value="登录" class="bn" /></div></a>
+    </form>
+</div>
+</body>
+</html>
